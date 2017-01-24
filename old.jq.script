@@ -1,0 +1,20 @@
+## I used to filter the debian.json with jq to add/remove stuff
+## so I leave this script for history
+
+
+## $ jq -f my-debian8.jq.script debian.json | packer build -only=vmware-iso -var-file=my-debian8.json -
+
+
+
+## vagrant post-processor prepares .box image and deletes build artifacts, but I just want a vmware vm locally
+## and I don't want vmware-tools, so I both skip scripts/vmware.sh and set tools_upload_flavor to empty string
+
+
+del(."post-processors")   |
+
+(  .builders[] | select(.type == "vmware-iso") | ."tools_upload_flavor"  )  |= ""   |
+del(  .provisioners[0].scripts[] | select(contains("vmware.sh"))  ) |
+
+.provisioners[0].scripts |= .+ ["my-vmware.sh"]
+
+
