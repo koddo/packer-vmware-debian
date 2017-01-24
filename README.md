@@ -1,9 +1,11 @@
 
 # My VMWare VM with Debian using Packer
 
-This is a customized copy of <https://github.com/boxcutter/debian>.
+This is my customized copy of <https://github.com/boxcutter/debian> to quickly get a fresh local Debian VM.
 
 # How to build
+
+I left all those configuration files `debian7*.json` and `debian8*.json` intact and created my own.
 
 Customize variables in [my-debian8.json](my-debian8.json):
 
