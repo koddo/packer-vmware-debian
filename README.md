@@ -5,8 +5,7 @@ This is my customized copy of <https://github.com/boxcutter/debian> to quickly g
 
 # How to build
 
-I left all those configuration files `debian7*.json` and `debian8*.json` intact and created my own.
-
+I left all those configuration files `debian7*.json` and `debian8*.json` intact and created my own.  
 Customize variables in [my-debian8.json](my-debian8.json):
 
 - `vm_name`
@@ -30,8 +29,7 @@ Main template, [debian.json](debian.json):
 - added [my-install-open-vmware-tools.sh](my-install-open-vmware-tools.sh) to that scripts list
 - added shared folder, see `sharedFolder*.*` in `vmx_data`
 
-At the moment of writing `vmhgfs-fuse` is in `open-vmware-tools` package >= 10.x, so I install it from backports: <https://packages.debian.org/search?keywords=open-vm-tools>.
-
+At the moment of writing `vmhgfs-fuse` is in `open-vmware-tools` package >= 10.x, so I install it from backports: <https://packages.debian.org/search?keywords=open-vm-tools>.  
 TODO: when the package is in main debian repo, update [my-install-open-vmware-tools.sh](my-install-open-vmware-tools.sh)
 
 
@@ -44,7 +42,7 @@ The [custom-script.sh](custom-script.sh) prepares the VM:
 
 # How to update this copy from original repo
 
-<https://github.com/boxcutter/debian/releases.atom>
+<https://github.com/boxcutter/debian/releases.atom>  
 <https://github.com/boxcutter/debian/commits.atom>
 
 ``` Shell
