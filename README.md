@@ -20,6 +20,9 @@ Then:
 $ packer build -only=vmware-iso -var-file=my-debian8.json debian.json
 ```
 
+# Shared dirs
+
+`/mnt/vmshared/`
 
 # Changelog
 
@@ -28,7 +31,7 @@ Main template, [debian.json](debian.json):
 - removed `post-processors` to skip building the vagrant box, I just need the VM
 - set `vmware-iso.tools_upload_flavor = ""` and removed `vmware.sh` from `provisioners[0].scripts` to avoid installing VMWare tools, it fails to compile for me
 - added [my-install-open-vmware-tools.sh](my-install-open-vmware-tools.sh) to that scripts list
-- added shared folder, see `sharedFolder*.*` in `vmx_data`
+- added a shared folder, see `sharedFolder*.*` in `vmx_data`
 
 At the moment of writing `vmhgfs-fuse` is in `open-vmware-tools` package >= 10.x, so I install it from backports: <https://packages.debian.org/search?keywords=open-vm-tools>.  
 TODO: when the package is in main debian repo, update [my-install-open-vmware-tools.sh](my-install-open-vmware-tools.sh)
@@ -38,7 +41,7 @@ The [custom-script.sh](custom-script.sh) prepares the VM:
 
 - adds my keys to `authorized_keys`
 - disables password authentication
-
+- enables shared directories in `/mnt/vmshared/`
 
 
 # How to update this copy from original repo
