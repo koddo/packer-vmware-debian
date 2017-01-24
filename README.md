@@ -5,7 +5,8 @@ This is my customized copy of <https://github.com/boxcutter/debian> to quickly g
 
 # How to build
 
-I left all those configuration files `debian7*.json` and `debian8*.json` intact and created my own.  
+I left all those configuration files `debian7*.json` and `debian8*.json` intact and created my own.
+
 Customize variables in [my-debian8.json](my-debian8.json):
 
 - `vm_name`
