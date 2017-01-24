@@ -5,7 +5,7 @@ This is a customized copy of <https://github.com/boxcutter/debian>.
 
 # How to build
 
-Customize variables in [my-debian8.json]:
+Customize variables in [my-debian8.json](my-debian8.json):
 
 - `vm_name`
 - `iso_url`, `iso_checksum`: <https://www.debian.org/distrib/netinst>, <https://www.debian.org/CD/verify>
