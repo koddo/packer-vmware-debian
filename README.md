@@ -21,7 +21,7 @@ $ packer build -only=vmware-iso -var-file=my-debian8.json debian.json
 
 # Changelog
 
-Main template, [](debian.json):
+Main template, [debian.json](debian.json):
 
 - removed `post-processors` to skip building the vagrant box, I just need the VM
 - set `vmware-iso.tools_upload_flavor = ""` and removed `vmware.sh` from `provisioners[0].scripts` to avoid installing VMWare tools, it fails to compile for me
@@ -31,7 +31,7 @@ Main template, [](debian.json):
 At the moment of writing `vmhgfs-fuse` is in `open-vmware-tools` package >= 10.x, so I install it from backports: <https://packages.debian.org/search?keywords=open-vm-tools>.
 TODO: when the package is in main debian repo, update `my-install-open-vmware-tools.sh` 
 
-[](custom-script.sh) prepares the VM:
+[custom-script.sh](custom-script.sh) prepares the VM:
 
 - adds my keys to `authorized_keys`
 - disables password authentication
