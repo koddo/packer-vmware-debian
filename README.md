@@ -32,8 +32,7 @@ At the moment of writing `vmhgfs-fuse` is in `open-vmware-tools` package >= 10.x
 TODO: when the package is in main debian repo, update [my-install-open-vmware-tools.sh](my-install-open-vmware-tools.sh)
 
 
-
-[custom-script.sh](custom-script.sh) prepares the VM:
+The [custom-script.sh](custom-script.sh) prepares the VM:
 
 - adds my keys to `authorized_keys`
 - disables password authentication
