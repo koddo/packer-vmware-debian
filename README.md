@@ -51,10 +51,10 @@ TODO: when the package is in main debian repo, update [my-install-open-vmware-to
 
 The [custom-script.sh](custom-script.sh) prepares the VM:
 
-- adds my keys to `authorized_keys`
-- disables password authentication
+- adds my keys to `authorized_keys` and disables password authentication
 - enables shared directories in `/mnt/vmshared/`
 - enables accessing the vm by bonjour/zeroconf using `libnss-mdns`
+- etc
 
 # How to update this copy from original repo
 
