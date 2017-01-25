@@ -15,5 +15,6 @@
     "shared_folder_guest_name" : "shared",
     "install_vagrant_key": "false",
     "headless": "false",
-    "where_to_put": "/Users/alex/Development/VMware VMs"
+    "where_to_put": "/Users/alex/Development/VMware VMs",
+    "update": "false"
 }

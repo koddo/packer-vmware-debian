@@ -10,9 +10,16 @@ I left all those configuration files `debian7*.json` and `debian8*.json` intact 
 Customize variables in [my-debian8.json](my-debian8.json):
 
 - `vm_name`
-- `iso_url`, `iso_checksum`: <https://www.debian.org/distrib/netinst>, <https://www.debian.org/CD/verify>
+- `iso_url`, `iso_checksum`
 - `headless: false`, probably
 - etc
+
+Debian images are here: <http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/>; fingerprints for keys are here: <https://www.debian.org/CD/verify>.
+
+``` Shell
+$ gpg --keyserver keyring.debian.org --recv-keys 6294BE9B     # this is "Debian CD signing key <debian-cd@lists.debian.org>"
+$ gpg --verify SHA256SUMS.sign SHA256SUMS    # fingerprint must be: DF9B 9C49 EAA9 2984 3258  9D76 DA87 E80D 6294 BE9B, check <https://www.debian.org/CD/verify>
+```
 
 Then:
 
@@ -22,7 +29,12 @@ $ packer build -only=vmware-iso -var-file=my-debian8.json debian.json
 
 # Shared dirs
 
-`/mnt/vmshared/`
+Here they are: `/mnt/vmshared/`
+
+# After build check these
+
+- login
+- shared dirs
 
 # Changelog
 
@@ -42,7 +54,7 @@ The [custom-script.sh](custom-script.sh) prepares the VM:
 - adds my keys to `authorized_keys`
 - disables password authentication
 - enables shared directories in `/mnt/vmshared/`
-
+- enables accessing the vm by bonjour/zeroconf using `libnss-mdns`
 
 # How to update this copy from original repo
 
