@@ -1,5 +1,5 @@
 
-Notes to self
+Notes to self.
 
 # My VMWare VM with Debian using Packer
 
