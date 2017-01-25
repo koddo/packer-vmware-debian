@@ -1,6 +1,4 @@
 
-Notes to self.
-
 # My VMWare VM with Debian using Packer
 
 This is my customized copy of <https://github.com/boxcutter/debian> to quickly get a fresh local Debian VM.
