@@ -29,7 +29,7 @@ $ packer build -only=vmware-iso -var-file=my-debian8.json debian.json
 
 # Shared dirs
 
-Here they are: `/mnt/vmshared/`
+Here they are: `/mnt/hgfs/`
 
 # After build check these
 
@@ -66,4 +66,9 @@ $ git remote add upstream https://github.com/boxcutter/debian
 $ git pull upstream master
 ```
 
+
+# Misc
+
+TODO: put ansible roles here for docker, compose, etc  
+also `$ apt-get install -y silversearcher-ag`
 
