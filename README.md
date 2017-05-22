@@ -14,7 +14,7 @@ Customize variables in [my-debian8-vars.json](my-debian8-vars.json):
 - `headless: false`, probably
 - etc
 
-Debian images are here: <http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/>; fingerprints for keys are here: <https://www.debian.org/CD/verify>.
+Debian images are here: <https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/>; fingerprints for keys are here: <https://www.debian.org/CD/verify>.
 
 ``` Shell
 $ gpg --keyserver keyring.debian.org --recv-keys 6294BE9B     # this is "Debian CD signing key <debian-cd@lists.debian.org>"
