@@ -27,7 +27,7 @@ sed -i 's/\#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd
 
 
 # shared dirs are here
-echo ".host:/ /mnt/vmshared/ fuse.vmhgfs-fuse allow_other,uid=$(id -u $SSH_USER),gid=$(id -g $SSH_USER),auto_unmount,defaults 0 0" >> /etc/fstab
+echo ".host:/ /mnt/hgfs/ fuse.vmhgfs-fuse allow_other,uid=$(id -u $SSH_USER),gid=$(id -g $SSH_USER),auto_unmount,defaults 0 0" >> /etc/fstab
 
 
 ## to ping vagrant.local
