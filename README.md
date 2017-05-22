@@ -24,7 +24,7 @@ $ gpg --verify SHA256SUMS.sign SHA256SUMS    # fingerprint must be: DF9B 9C49 EA
 Then:
 
 ``` Shell
-$ packer build -only=vmware-iso -var-file=my-debian8.json debian.json
+$ packer build -only=vmware-iso -var-file=my-debian8-vars.json my-debian8.json
 ```
 
 # Shared dirs
