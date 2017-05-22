@@ -7,7 +7,7 @@ This is my customized copy of <https://github.com/boxcutter/debian> to quickly g
 
 I left all those configuration files `debian7*.json` and `debian8*.json` intact and created my own.
 
-Customize variables in [my-debian8.json](my-debian8.json):
+Customize variables in [my-debian8-vars.json](my-debian8-vars.json):
 
 - `vm_name`
 - `iso_url`, `iso_checksum`
